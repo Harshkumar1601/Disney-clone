@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="movies.css">
+    <title>Movies</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var slideIndex = 0;
+        var slides = $(".slider");
+        
+        $(".next-btn").click(function(){
+            if (slideIndex < slides.length - 1) {
+                slideIndex++;
+            } else {
+                slideIndex = 0;
+            }
+            updateSlide();
+        });
+        
+        $(".prev-btn").click(function(){
+            if (slideIndex > 0) {
+                slideIndex--;
+            } else {
+                slideIndex = slides.length - 1;
+            }
+            updateSlide();
+        });
+        
+        function updateSlide() {
+            var slideWidth = slides.eq(0).outerWidth();
+            $(".caraousel").css("transform", "translateX(-" + (slideWidth * slideIndex) + "px)");
+        }
+    });
+</script>
+ 
+    <script>
+    $(document).ready(function(){
+    $("#languageDropdownBtn").click(function(){
+        $("#languageDropdown").slideToggle();
+     });
+    });
+    </script>
+    <style>
+        .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #111929;
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(225, 211, 211);
+    padding: 12px 16px;
+    text-decoration: none;
+    display:flex;
+}
+
+.dropdown-content a:hover {
+    background-color: #232020;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="logo.png" class="brand-logo" alt="logo">
+        <ul class="nav-links">
+            <li class="nav-items"> <a href="home.html">Home</a></li>
+            <li class="nav-items"> <a href="movies.html">Movies</a></li>
+            <li class="nav-items"> <a href="sport.html">Sports</a></li>
+            <li class="nav-items"> <a href="#">Disney+</a></li>
+            <li class="nav-items-kid"> <a href="#">KIDS</a></li>
+            <li class="nav-items"> <a href="#" id="languageDropdownBtn">Language</a>
+                <ul class="dropdown-content" id="languageDropdown">
+                    <p><a href="#">English</a></p>
+                    <p><a href="#">Spanish</a></p>
+                    <p><a href="#">French</a></p>
+                    <!-- Add more languages as needed -->
+                </ul>
+            </li>
+        </ul>
+        <div class="right-container">
+            <input type="text" class="search-box" placeholder="Search">
+            <a href="subcription.html" target="_blank"><button class="sub-btn">Subscribe</button></a>
+            <a href="login_disney.html" class="login-link">Login</a>
+
+        </div>
+    </nav>
+ 
+    <div class="caraousel-container">
+        <div class="caraousel">
+            <div class="slider">
+                <div class="slide-content">
+                    <h1 class="movie-title">Stranger Things</h1>
+                    <p class="movie-des">  
+                        "Stranger Things" captivates audiences with its blend of nostalgic charm, supernatural mysteries, and endearing characters navigating a world filled with eerie occurrences in 1980s small-town America.                </div>
+                <img src="strangerthings3.jpg" alt="Loki">
+            </div>
+            <div class="slider">
+                <div class="slide-content">
+                    <h1 class="movie-title">Brahmastra</h1>
+                    <p class="movie-des">  
+                        "Brahmastra" merges ancient mysticism with contemporary intrigue, crafting a cinematic saga of destiny and magic.                    </p>
+                </div>
+                <img src="brahmastra.jpg" alt="Loki">
+            </div>
+            <div class="slider">
+                <div class="slide-content">
+                    <h1 class="movie-title">The Martian</h1>
+                    <p class="movie-des">  
+                        "The Martian" is a gripping tale of survival and human resilience as an astronaut fights against the desolate landscape of Mars to stay alive and make his way back home.                    </p>
+                </div>
+                <img src="the_.jpg" alt="Another Movie">
+            </div>
+        </div>
+        <button class="prev-btn">←</button>
+        <button class="next-btn">→</button>
+    </div>
+    
+
+    
+    <h1 class="title">Hollywood Movies</h1>
+    <div class="movies-list">
+        <button class="prv-btn"><img src="pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="nxt.png" alt=""></button>
+        <div class="card-container">
+            <div class="card">
+                <img src="1.webp" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">Aladin</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="2.webp" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">The Little Mermaid</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="3.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">Jungle cruise</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="4.webp" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">Elemental Forces of Nature</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="5.jpeg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">Avatar: the way of water</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="6.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">The dark knight</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="7.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">The cars</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="title">Bollywood Movies</h1>
+    <div class="movies-list">
+        <div class="card-container">
+            <div class="card">
+                <img src="a.webp" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">12th fail</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="b.webp" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">Badhai ho</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="c.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">sita ramam</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="d.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">shiddat</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="e.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">kesri</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="f.webp" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">chhichhore</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="g.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">3 idiots</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="title">Recommanded Movies</h1>
+    <div class="movies-list">
+        <button class="prv-btn"><img src="pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="nxt.png" alt=""></button>
+        <div class="card-container">
+            <div class="card">
+                <img src="8.webp" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">fantastic 4</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="h.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">Tanhaji</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="9.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">Free Guy</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="i.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">M.S. Dhoni the untold story</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="10.avif" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">Pirates of the caribean</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="j.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">mission mangal</h1>
+                    <button class="watchlist-btn">watch now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="movies.js"></script>
+</body>
+</html>

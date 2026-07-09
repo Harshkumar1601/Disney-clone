@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url("WhatsApp Image 2024-04-22 at 1.21.44 PM.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  /* body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    background-image: linear-gradient(to bottom right, #0074e4, #4fb1e4);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+} */
+  .container {
+    float: left;
+    max-width: 350px;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 40px;
+    padding: 20px;
+    border:  rgb(55, 97, 194);
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(5, 47, 162);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .error {
+    color: rgb(0, 51, 255);
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Login or signup to continue</h2>
+  <form id="loginForm" onsubmit="return validateForm()">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" placeholder="Enter email id">
+    <label for="phone">Phone number</label>
+    <input type="text" id="phone" name="phone" placeholder="Enter mobile number">
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Enter Password">
+
+    <input type="submit" value="Login">
+  </form>
+  <div id="error-msg" class="error"></div>
+  <p>If you don't register</p>
+  <p><a href="registration_dis.html" target="_blank"> Click here for Registration </a></p>
+</div>
+
+<script>
+function validateForm() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  var errorMsg = document.getElementById("error-msg");
+  var phone = document.getElementById('phone').value;
+  
+  // Reset error message
+  errorMsg.innerHTML = "";
+
+  if (username === "" || password === "" ) {
+    errorMsg.innerHTML = "Please fill in all fields.";
+    alert("Please fill in all fields");
+    return false;
+  }
+
+  // Add your additional validation logic here, such as checking username and password format
+  
+  // For demonstration purpose, assuming username is "user" and password is "password"
+  var emailRegex = /^\S+@\S+\.\S+$/;
+      if (!emailRegex.test(username)) {
+        alert('Please enter a valid email address');
+        return false;
+      }
+
+      var phonetest = /^[0-9]{10}$/;
+      if (!phonetest.test(phone)) {
+        alert('Please enter a valid phone number');
+        return false;
+      }
+
+    window.open("home.html");
+    return true;
+}
+</script>
+
+</body>
+</html>

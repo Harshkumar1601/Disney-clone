@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-image: url("WhatsApp Image 2024-04-22 at 1.21.44 PM.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+    
+    
+  .container {
+    float: left;
+    max-width: 350px;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 40px;
+    padding: 20px;
+    border:  rgb(55, 97, 194);
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+    input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color:  rgb(5, 47, 162);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  input[type="text"], input[type="password"], input[type="email"],input[type="date"],select,textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+  }
+  </style>
+  <script>
+    function validateForm() {
+      var firstName = document.getElementById('firstName').value;
+      var lastName = document.getElementById('lastName').value;
+      var email = document.getElementById('email').value;
+      var phone = document.getElementById('phone').value;
+      var password = document.getElementById('password').value;
+      var date = document.getElementById('date').value;
+      var gender = document.getElementById('gender').value;
+      var address = document.getElementById('address').value;
+      var city = document.getElementById('city').value;
+      var state = document.getElementById('state').value;
+
+      if (firstName == '' || lastName == '' || email == '' || password == '' || phone == '' || date == '' || gender == '' || address == '' || city=='' || state=='') {
+        alert('Please fill in all fields');
+        return false;
+      }
+   
+      var emailRegex = /^\S+@\S+\.\S+$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address');
+        return false;
+      }
+
+      var phonetest = /^[0-9]{10}$/;
+      if (!phonetest.test(phone)) {
+        alert('Please enter a valid phone number');
+        return false;
+      }
+
+      if (password.length < 6) {
+        alert('Password must be at least 6 characters long');
+        return false;
+      }
+      window.open("home.html");
+      return true;
+    }
+  </script>
+</head>
+<body>
+   <div class="container">  
+  <h2>Registration Form</h2>
+  <form onsubmit="return validateForm()">
+    <label for="firstName">First Name:</label><br>
+    <input type="text" id="firstName" name="firstName" placeholder="Enter firstname"><br>
+    
+    <label for="lastName">Last Name:</label><br>
+    <input type="text" id="lastName" name="lastName" placeholder="Enter lastname"><br>
+    
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter email id"><br>
+
+    <label for="phone">Phone number:</label><br>
+    <input type="text" id="phone" name="phone" placeholder="Enter mobile number"><br>
+    
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" placeholder="Enter Password"><br>
+
+    <label for="gender" required>Gender:</label><br>
+    <input type="radio" id="gender" name="gender" value="male">Male  <input type="radio" id="gender" name="gender" value="female">Female<br><br>
+
+    <label for="date">Date of Birth:</label><br>
+    <input type="date" id="date" name="date"><br>
+
+    <label for="address">Address:</label><br>
+    <textarea rows="5" cols="50" id="address" name="address" placeholder="Enter your residence address...." ></textarea><br>
+
+   <input type="submit" value="Register"></a>
+  </form>
+  </div>
+</body>
+</html>

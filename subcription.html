@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription</title>
+    <style>
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  filter: blur(2px); 
+}
+    
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.plans {
+    display: flex;
+    justify-content:space-between;
+    margin-top: 30px;
+}
+
+.plan {
+    width: 30%;
+    background-color: rgb(44, 81, 182);
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.plan h2 {
+    color: #000000;
+}
+
+.plan p {
+    color: #05162d;
+    margin-bottom: 20px;
+}
+
+.plan ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.plan ul li {
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+  <video autoplay muted loop id="myVideo">
+    <source src="10959795-hd_1920_1080_30fps.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  
+    
+      <div class="container">
+        <h1 style="color: #ffffff;padding-top: 100px;">Choose Your Subscription Plan</h1>
+        <div class="plans">
+            <div class="plan">
+                <h2>Mobile</h2>
+                <p>₹149/3-Months</p>
+                <ul>
+                    <li>Access to basic content</li>
+                    <li>Add free-❌ </li>
+                    <li>Number of device-1</li>
+                    <li>HD 720p</li>
+                    <li>Audio quality-Stereo</li>
+                </ul>
+                <a href="payment.html"><button>Select Plan</button></a>
+            </div>
+            <div class="plan">
+                <h2>Super</h2>
+                <p>₹299/3-Months</p>
+                <ul>
+                    <li>Access to All content</li>
+                    <li>Add free-❌ </li>
+                    <li>Number of device-2</li>
+                    <li>Full HD 1080p</li>
+                    <li>Audio quality-Dolby Atoms</li>
+                </ul>
+                <a href="payment.html"><button>Select Plan</button></a>
+            </div>
+            <div class="plan">
+                <h2>Premium</h2>
+                <p>₹499/3-Months</p>
+                <ul>
+                    <li>Access to All content</li>
+                    <li>Add free-✔️ </li>
+                    <li>Number of device-4</li>
+                    <li>4K 2160p</li>
+                    <li>Audio quality-Dolby Atoms</li>
+                </ul>
+                <a href="payment.html"><button>Select Plan</button></a>
+            </div>
+        </div>
+    </div>
+
+      
+</body>
+</html>

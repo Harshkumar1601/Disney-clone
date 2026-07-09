@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sport.css">
+    <title>Sports</title>
+    <script src="jquery-3.7.1.min.js"></script> 
+    <script>
+    $(document).ready(function(){
+    $("#languageDropdownBtn").click(function(){
+        $("#languageDropdown").slideToggle();
+     });
+    });
+    </script>
+    <style>
+        .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #111929;
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(225, 211, 211);
+    padding: 12px 16px;
+    text-decoration: none;
+    display:flex;
+}
+
+.dropdown-content a:hover {
+    background-color: #232020;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="logo.png" class="brand-logo" alt="logo">
+        <ul class="nav-links">
+            <li class="nav-items"> <a href="home.html" target="_blank">Home</a></li>
+            <li class="nav-items"> <a href="movies.html" target="_blank">Movies</a></li>
+            <li class="nav-items"> <a href="sport.html">Sports</a></li>
+            <li class="nav-items"> <a href="#">Disney+</a></li>
+            <li class="nav-items-kid"> <a href="#">KIDS</a></li>
+            <li class="nav-items"> <a href="#" id="languageDropdownBtn">Language</a>
+                <ul class="dropdown-content" id="languageDropdown">
+                    <p><a href="#">English</a></p>
+                    <p><a href="#">Spanish</a></p>
+                    <p><a href="#">French</a></p>
+                    <!-- Add more languages as needed -->
+                </ul>
+            </li>
+        </ul>
+ 
+        <div class="right-container"></div>
+            <input type="text" class="search-box" placeholder="Search">
+            <a href="subcription.html" target="_blank"><button class="sub-button">SUBSCRIBE</button></a>
+            <a href="login_disney.html" class=login target="_blank">Login</a>
+        </div>
+    </nav>
+ 
+    <div class="caraousel-container">   
+        <div class="carousel">
+         <!-- <div class="slider">
+            <div class="slide-content">
+                <h1 class="movie-title">LOKI</h1>
+                <p class="movie-des">Loki is the Thors brother</p>
+            </div>
+            <img src="lokiSlider.png" class="slider-img" alt="">
+         </div> -->
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video-card">
+            <img src="starsport.png" class="video-card-img" alt="disney">
+            
+        </div>
+        <div class="video-card">
+            <img src="SONY TEN.jpg" class="video-card-img" alt="disney">
+           
+        </div>
+        <div class="video-card">
+            <img src="SPORTS 18.jpg" class="video-card-img" alt="disney">
+            
+        </div>
+        <div class="video-card">
+            <img src="EUROSPORT.jpg" class="video-card-img" alt="disney">
+        </div>
+        <div class="video-card">
+            <img src="BAND SPORT.jpg    " class="video-card-img" alt="disney">
+        </div>
+    </div>
+    
+    <h1 class="title">Highlights</h1>
+    <div class="movies-list">
+        <button class="prv-btn"><img src="pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="nxt.png" alt=""></button>
+        <div class="card-container">
+            <div class="card">
+                <img src="RIVALARY.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">CSK V/S KKR</h1>
+                    <p class="des">CSK won by 7 wickets</p>
+                    <button class="watchlist-btn">Play now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="RIVALARY 2.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">RCB V/S MI</h1>
+                    <p class="des">MI won by 7 wickets</p>
+                    <button class="watchlist-btn">Play now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="RIVALARY 3.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">GT V/S RR (Final 2022)</h1>
+                    <p class="des">GT won his first season</p>
+                    <button class="watchlist-btn">Play now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="RIVALARY 4.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">CSK V/S RCB</h1>
+                    <p class="des">CSK won by 6 wickets</p>
+                    <button class="watchlist-btn">Play now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="RIVALARY 5.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">SRH V/S PBKS</h1>
+                    <p class="des">SRH won by 2-runs</p>
+                    <button class="watchlist-btn">Play now</button>
+                </div>
+            
+        </div>
+    </div>
+    <!-- <h1 class="title">New </h1> -->
+    <h1 class="title">Upcoming Matches</h1>
+    <div class="movies-list">
+        <div class="card-container">
+            <div class="card">
+                <img src="RR.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">RR V/S PBKS</h1>
+                    <p class="des">13th April-7:30 PM (wankhede)</p>
+                    <button class="watchlist-btn">Add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="CSK.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">MI V/S CSK</h1>
+                    <p class="des">14th April-7:30 PM (Wankhede)</p>
+                    <button class="watchlist-btn">Add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="messi.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">Portugal V/S Argentina</h1>
+                    <p class="des">15th May</p>
+                    <button class="watchlist-btn">Add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="RCB.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">KKR V/S RCB</h1>
+                    <p class="des">21th April-3:30 PM (Eden gardens) </p>
+                    <button class="watchlist-btn">Add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="PAKISTAN.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="name">NEWZEALAND V/S PAKISTAN (TEST Series)</h1>
+                    <p class="des">18th-27th April (Rawal pindi)</p>
+                    <button class="watchlist-btn">Add to watchlist</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="sport.js"></script>
+</body>
+</html>
